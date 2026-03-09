@@ -1,36 +1,57 @@
-Software Quality Metrics - E-commerce System
+E-commerce Quality Analysis
 
-Este repositório demonstra a análise de métricas de qualidade de código
-em um sistema simples de e-commerce utilizando Python.
+Este repositório demonstra como coletar e analisar métricas de qualidade
+de código em um sistema simples de e-commerce desenvolvido em Python.
+
+O projeto utiliza ferramentas comuns do ecossistema de Engenharia de
+Software e Qualidade de Software para medir características importantes
+do código.
 
 Estrutura do Projeto
 
-src/ cart.py order.py payment.py
+src/ - cart.py - order.py - payment.py
 
-tests/ test_cart.py test_order.py test_payment.py
+tests/ - test_cart.py - test_order.py - test_payment.py
 
-metrics/ defect_density.py
+metrics/ - defect_density.py - quality_report.py
 
-requirements.txt pytest.ini
+Arquivos principais: - requirements.txt - pytest.ini - README.md
 
 Métricas Analisadas
 
+O sistema coleta automaticamente as seguintes métricas:
+
+-   LOC (Lines of Code)
 -   Complexidade Ciclomática
 -   Cobertura de Testes
 -   Densidade de Defeitos
--   Linhas de Código (LOC)
 -   Duplicação de Código
+
+Ferramentas Utilizadas
+
+-   Python
+-   pytest
+-   pytest-cov
+-   radon
+-   jscpd
 
 Instalação
 
 Clone o repositório:
 
-git clone https://github.com/ivnavalenca/software-quality-metrics.git cd
-software-quality-metrics
+git clone https://github.com/TesteQualidadeSoftware-UNICAP/ecommerce-quality-analysis.git
 
-Instale as dependências:
+Entre na pasta do projeto:
+
+cd ecommerce-quality-analysis
+
+Instale as dependências Python:
 
 pip install -r requirements.txt
+
+Instale o detector de duplicação:
+
+npm install -g jscpd
 
 Executar Testes
 
@@ -42,32 +63,30 @@ pytest –cov=src
 
 Complexidade Ciclomática
 
-radon cc src -a
+python -m radon cc src -a
 
 Linhas de Código
 
-radon raw src
+python -m radon raw src
 
-Densidade de Defeitos
+Relatório Completo de Qualidade
 
-python metrics/defect_density.py
+Execute:
 
-Ferramentas Utilizadas
+python metrics/quality_report.py
 
--   Python
--   Pytest
--   Pytest-cov
--   Radon
+Exemplo de saída:
 
-Objetivo
+LOC total: 283 Complexidade média: A Cobertura de testes: 95% Defeitos
+conhecidos: 4 Densidade de defeitos: 14.13 defeitos/KLOC Duplicação de
+código: 0%
 
-Demonstrar como coletar e analisar métricas de qualidade de software
-para identificar:
+Diagnóstico
 
--   áreas de alta complexidade
--   cobertura insuficiente de testes
--   oportunidades de refatoração
--   possíveis riscos de manutenção no sistema
+O relatório gera automaticamente um diagnóstico baseado nas métricas
+coletadas.
 
-Este projeto pode ser utilizado como base para estudos de Engenharia de
-Software, Qualidade de Software e Testes Automatizados.
+Objetivo do Projeto
+
+Demonstrar como realizar análise de qualidade de software utilizando
+ferramentas automatizadas.

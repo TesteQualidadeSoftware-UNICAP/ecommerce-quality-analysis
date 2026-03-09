@@ -25,7 +25,7 @@ Instalação
 
 Clone o repositório:
 
-git clone https://github.com/seuusuario/software-quality-metrics.git cd
+git clone https://github.com/ivnavalenca/software-quality-metrics.git cd
 software-quality-metrics
 
 Instale as dependências:

@@ -1,92 +1,154 @@
-E-commerce Quality Analysis
+📊 Painel de Qualidade de Código (Code Quality Dashboard)
 
-Este repositório demonstra como coletar e analisar métricas de qualidade
-de código em um sistema simples de e-commerce desenvolvido em Python.
+Este projeto demonstra como coletar, analisar e visualizar métricas de
+qualidade de software em um sistema Python simples (simulação de
+e‑commerce).
 
-O projeto utiliza ferramentas comuns do ecossistema de Engenharia de
-Software e Qualidade de Software para medir características importantes
-do código.
+O objetivo é mostrar como ferramentas de engenharia de software podem
+ser usadas para avaliar a qualidade do código, semelhante a plataformas
+como SonarQube.
 
-Estrutura do Projeto
+------------------------------------------------------------------------
 
-src/ - cart.py - order.py - payment.py
+🎯 Objetivo do Projeto
 
-tests/ - test_cart.py - test_order.py - test_payment.py
+Criar um mini sistema de análise de qualidade de código que:
 
-metrics/ - defect_density.py - quality_report.py
+-   coleta métricas automaticamente
+-   interpreta os resultados
+-   apresenta um dashboard visual
+-   gera diagnóstico automático de qualidade
 
-Arquivos principais: - requirements.txt - pytest.ini - README.md
+Esse projeto pode ser utilizado em:
 
-Métricas Analisadas
+-   disciplinas de Engenharia de Software
+-   disciplinas de Qualidade de Software
+-   atividades práticas com métricas de código
 
-O sistema coleta automaticamente as seguintes métricas:
+------------------------------------------------------------------------
 
--   LOC (Lines of Code)
--   Complexidade Ciclomática
--   Cobertura de Testes
--   Densidade de Defeitos
--   Duplicação de Código
+# 🧱 Estrutura do Projeto
 
-Ferramentas Utilizadas
+```
+ecommerce-quality-analysis
+│
+├── src
+│   ├── cart.py
+│   ├── order.py
+│   └── payment.py
+│
+├── tests
+│   ├── test_cart.py
+│   ├── test_order.py
+│   └── test_payment.py
+│
+├── quality
+│   ├── collectors
+│   │   ├── loc.py
+│   │   ├── coverage.py
+│   │   ├── duplication.py
+│   │   └── complexity.py
+│   │
+│   ├── analyzers
+│   │   ├── defect_density.py
+│   │   └── diagnosis.py
+│   │
+│   └── report.py
+│
+├── dashboard
+│   └── dashboard.py
+│
+├── requirements.txt
+├── pytest.ini
+└── README.md
+```
 
--   Python
--   pytest
--   pytest-cov
--   radon
--   jscpd
+------------------------------------------------------------------------
 
-Instalação
+📏 Métricas Coletadas
 
-Clone o repositório:
+LOC (Lines of Code)
+Cobertura de testes (Test Coverage)
+Complexidade ciclomática (Cyclomatic Complexity)
+Duplicação de código (Code Duplication)
+Densidade de defeitos (Defect Density)
 
-git clone https://github.com/TesteQualidadeSoftware-UNICAP/ecommerce-quality-analysis.git
+------------------------------------------------------------------------
 
-Entre na pasta do projeto:
+🧰 Ferramentas Utilizadas
 
-cd ecommerce-quality-analysis
+Python
+pytest
+pytest-cov
+radon
+jscpd
+Streamlit
+Plotly
 
-Instale as dependências Python:
+------------------------------------------------------------------------
+
+▶️ Como Executar o Projeto
+
+Instalar dependências:
 
 pip install -r requirements.txt
 
-Instale o detector de duplicação:
+Instalar detector de duplicação:
 
 npm install -g jscpd
 
-Executar Testes
+Executar testes:
 
 pytest
 
-Cobertura de Testes
+Executar análise de cobertura:
 
 pytest –cov=src
 
-Complexidade Ciclomática
+Executar relatório de qualidade:
 
-python -m radon cc src -a
+python quality/report.py
 
-Linhas de Código
+Executar o dashboard:
 
-python -m radon raw src
+streamlit run dashboard/dashboard.py
 
-Relatório Completo de Qualidade
+------------------------------------------------------------------------
 
-Execute:
+📊 Exemplo de Resultado
 
-python metrics/quality_report.py
+Linhas de Código (LOC): 283
+Cobertura de Testes: 95%
+Duplicação de Código: 0%
+Densidade de Defeitos: 14.13 defeitos/KLOC
 
-Exemplo de saída:
+Diagnóstico automático:
 
-LOC total: 283 Complexidade média: A Cobertura de testes: 95% Defeitos
-conhecidos: 4 Densidade de defeitos: 14.13 defeitos/KLOC Duplicação de
-código: 0%
+✔ Cobertura de testes excelente
+✔ Baixa duplicação de código
+⚠ Densidade de defeitos elevada (sistema pequeno)
 
-Diagnóstico
+------------------------------------------------------------------------
 
-O relatório gera automaticamente um diagnóstico baseado nas métricas
-coletadas.
+🚦 Semáforo de Qualidade
 
-Objetivo do Projeto
+🟢 Verde → boa qualidade
+🟡 Amarelo → atenção
+🔴 Vermelho → problema de qualidade
 
-Demonstrar como realizar análise de qualidade de software utilizando
-ferramentas automatizadas.
+------------------------------------------------------------------------
+
+📈 Visualizações do Dashboard
+
+Indicadores de qualidade
+Semáforo de qualidade
+Complexidade por módulo
+Ranking das funções mais complexas
+Diagnóstico automático
+
+------------------------------------------------------------------------
+
+📌 Conclusão
+
+Este projeto demonstra como ferramentas simples podem ser combinadas
+para criar um sistema automatizado de análise de qualidade de código.

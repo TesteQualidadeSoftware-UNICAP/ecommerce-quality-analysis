@@ -67,11 +67,11 @@ ecommerce-quality-analysis
 
 📏 Métricas Coletadas
 
-LOC (Lines of Code)
-Cobertura de testes (Test Coverage)
-Complexidade ciclomática (Cyclomatic Complexity)
-Duplicação de código (Code Duplication)
-Densidade de defeitos (Defect Density)
+LOC (Lines of Code) <br>
+Cobertura de testes (Test Coverage) <br>
+Complexidade ciclomática (Cyclomatic Complexity) <br>
+Duplicação de código (Code Duplication) <br>
+Densidade de defeitos (Defect Density) <br>
 
 ------------------------------------------------------------------------
 
@@ -117,34 +117,34 @@ streamlit run dashboard/dashboard.py
 
 📊 Exemplo de Resultado
 
-Linhas de Código (LOC): 283
-Cobertura de Testes: 95%
-Duplicação de Código: 0%
-Densidade de Defeitos: 14.13 defeitos/KLOC
+Linhas de Código (LOC): 283 <br>
+Cobertura de Testes: 95% <br>
+Duplicação de Código: 0% <br>
+Densidade de Defeitos: 14.13 defeitos/KLOC <br>
 
 Diagnóstico automático:
 
-✔ Cobertura de testes excelente
-✔ Baixa duplicação de código
-⚠ Densidade de defeitos elevada (sistema pequeno)
+✔ Cobertura de testes excelente <br>
+✔ Baixa duplicação de código <br>
+⚠ Densidade de defeitos elevada (sistema pequeno) <br>
 
 ------------------------------------------------------------------------
 
 🚦 Semáforo de Qualidade
 
-🟢 Verde → boa qualidade
-🟡 Amarelo → atenção
-🔴 Vermelho → problema de qualidade
+🟢 Verde → boa qualidade <br>
+🟡 Amarelo → atenção <br>
+🔴 Vermelho → problema de qualidade <br>
 
 ------------------------------------------------------------------------
 
 📈 Visualizações do Dashboard
 
-Indicadores de qualidade
-Semáforo de qualidade
-Complexidade por módulo
-Ranking das funções mais complexas
-Diagnóstico automático
+Indicadores de qualidade <br>
+Semáforo de qualidade <br>
+Complexidade por módulo <br>
+Ranking das funções mais complexas <br>
+Diagnóstico automático <br>
 
 ------------------------------------------------------------------------
 

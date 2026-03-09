@@ -1,7 +1,18 @@
-from src.payment import calcular_total
+def process_payment(amount, method, authorized):
+    if amount <= 0:
+        raise ValueError("Valor inválido")
 
-def test_calcular_total_com_desconto():
-    assert calcular_total(100, 0.1) == 90
+    if not authorized:
+        return {"status": "denied", "amount": amount}
 
-def test_calcular_total_sem_desconto():
-    assert calcular_total(100, 0) == 100
+    if method == "credit_card":
+        return {"status": "approved", "amount": amount}
+
+    elif method == "pix":
+        return {"status": "approved", "amount": amount}
+
+    elif method == "boleto":
+        return {"status": "pending", "amount": amount}
+
+    else:
+        raise ValueError("Método de pagamento inválido")
